@@ -4,6 +4,9 @@ def coin_toss_game(rounds):
     heads_count = 0
     tails_count = 0
     
+    user_name = input("Who are you?\n> ")
+    print(f"Hello, {user_name}!")
+    
     print("Tossing a coin...")
     
     for round_num in range(1, rounds + 1):
@@ -18,9 +21,9 @@ def coin_toss_game(rounds):
     print(f"Heads: {heads_count}, Tails: {tails_count}")
     
     if heads_count > tails_count:
-        print("You won!")          #message
+        print(f"{user_name} won!")  # Print user name if heads win
     else:
-        print("You lost!")       #message
+        print(f"{user_name} lost!")  # Print user name if tails win
 
 # Simulate 3 rounds of the game
 coin_toss_game(3)
